@@ -1,0 +1,38 @@
+Създадени са по няколко събития и клиенти в края на самия JavaScript файл.
+
+Тестови команди за въвеждане в конзолата за всяка задача:
+1) 
+2) printAllEvents();
+   printEventInfo(x); - на мястото на x стои номер на събитието по уникален идентификатор. Например:
+   printEventInfo(3); - информация за събитието
+   printEventInfo(20): - съобщение за неизпълнение поради несъществуващо събитие
+3) removeEvent(x); - на мястото на x стои уникален идентификатор. При вписване на некоректни данни се изписва съобщение за неуспешна операция. Пример: 
+   removeEvent(4);
+4) createEvent(x, y); - на мястото на x стои име на събитието, на мястото на y стои флаг за достъп (true/ false). При невъвеждане на y по default достъпът е разрешен за всички възрасти (false). Примери:
+   createEvent(); - съобщение за неизпълнение поради липса на предоставено име.
+   createEvent("Student party at Bling", true); - достъпно за лица над 18 години
+   createEvent("Fundraiser at State Opera House"); - достъпно за всички възрасти
+5) updateEventInfo(x, y, z); - на мястото на x стои уникален индентификатор, на мястото на y стои ново име на събитието, на мястото на z стои нов флаг за достъп до събитието. x е задължителен параметър, като y и z не са, но поне един от тях трябва да последва след x. при неспазване на изискванията за формат и брой на въведените данни се извеждат необходимите съобщения. Пример:
+   updateEventInfo();
+   updateEventInfo(200);
+   updateEventInfo(5, "new name for event");
+   updateEventInfo(5, true);
+   updateEventInfo(5, "another new name", false);
+6) addAttendantToEvent(x, y); - x- уникален идентификатор за събитие, y- уникален идентифкатор за клиент. При неспазваnе на формата и броя на въведените данни се извеждат необходимите съобщения. Пример:
+   addAttendantToEvent(1,2);
+   addAttendantToEvent(1,1);
+   addAttendantToEvent();
+   addAttendantToEvent(100);
+   addAttendantToEvent("some text");
+7) showAttendantsAtEvent(x, y); - x- уникален идентификатор на събитието. y- пол (male/female), не е задължителен параметър. Пример:
+   showAttendantsAtEvent(5); - извеждат се всички клиенти, записани за събитието независимо от пола.
+   showAttendantsAtEvent(1, "male");
+   showAttendantsAtEvent(1, "female");
+8) removeAttendantFromEvent(x, y); - x- уникален идентификатор на събитието, y- уникален идентификатор на клиента. И двата параметъра са задължителни. При неспазване на изискванията за формат и брой на параметрите се извеждат необходимите съобщения. Примери:
+   removeAttendantFromEvent();
+   removeAttendantFromEvent(5, 3);
+   removeAttendantFromEvent(5, 10);
+   removeAttendantFromEvent(5);
+
+
+
