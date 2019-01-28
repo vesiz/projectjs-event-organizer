@@ -29,6 +29,7 @@ var createEvent = function(_eventName, _access){
     }
     
     Events.access[Events.access.length] = _access;
+    console.log("Event successfully created. Event Id: " + Events.eventId[Events.eventId.length - 1]);
 }
 
 var printEventInfo = function(_eventId){
