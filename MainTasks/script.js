@@ -58,12 +58,8 @@ var checkAccess = function(value){
 //2. Извежда всички вече съхранени събития, като визуализира цялата необходима информация за тях.
 
 var printAllEvents = function(){
-    for(var i = 1; i <= eventIdCounter; i++){
-        if(Events.eventId.indexOf(i) < 0){
-            continue;
-        }
-
-        printEventInfo(i);
+    for(var i = 0; i < Events.eventId.length; i++){
+        printEventInfo(Events.eventId[i]);
     }
 };
 
