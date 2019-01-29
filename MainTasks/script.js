@@ -25,6 +25,7 @@ var createEvent = function(_eventName, _access){
 
     if(_access != true){
         Events.access[Events.access.length] = false;
+        console.log("Event successfully created. Event Id: " + Events.eventId[Events.eventId.length - 1]);
         return;
     }
     
