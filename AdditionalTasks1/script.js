@@ -246,23 +246,11 @@ var printAttendantInfo = function(_attendantId){
     console.log(Attendants.attendantName[index] + ", " + Attendants.gender[index] + " and " + Attendants.age[index] + " years old.");
 };
 
-
-//7. Визуализирайте списък с всички клиенти които присъстват на определено събитие.
-//Предоставете възможност да бъдат филтрирани по пол, тоест да се визуализират само мъжете или само жените.
-
-var showAttendantsAtEvent = function(_eventId, _gender){
-    var index = Events.eventId.indexOf(_eventId);
-
-    if(index < 0){
-        console.log("The event you are looking for does not exist. Operation not successful.");
-        return;
+var printAllAttendants = function(){
+    for(var i = 0; i < Attendants.attendantId.length; i++){
+        printAttendantInfo(Attendants.attendantId[i]);
     }
-
-    if(_gender == null){
-        console.log("All attendants going to " + Events.eventName[index] + " are: ");
-
-        for(var i = 0; i < Events.attendants[index].length; i++){
-            printAttendantInfo(Events.attendants[index][i]);
+};
         }
     }
     else if(_gender == "female" || _gender == "male"){
