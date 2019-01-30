@@ -251,6 +251,20 @@ var printAllAttendants = function(){
         printAttendantInfo(Attendants.attendantId[i]);
     }
 };
+
+var showAttendantsAtEvent = function(_eventId, _gender){
+    var index = Events.eventId.indexOf(_eventId);
+    
+    if(index < 0){
+        console.log("The event you are looking for does not exist. Operation not successful.");
+        return;
+    }
+    
+    if(_gender == null){
+        console.log("All attendants going to " + Events.eventName[index] + " are: ");
+        
+        for(var i = 0; i < Events.attendants[index].length; i++){
+            printAttendantInfo(Events.attendants[index][i]);
         }
     }
     else if(_gender == "female" || _gender == "male"){
