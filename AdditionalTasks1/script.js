@@ -53,6 +53,14 @@ var printEventInfo = function(_eventId){
 
     var index = Events.eventId.indexOf(_eventId);
     var eventString = "Event " + Events.eventId[index] + ": " + Events.eventName[index] + ". " + checkAccess(Events.access[index]);
+    
+    if(Events.date[index] != undefined){
+        eventString += "\n\tThe date specified for this event is: " + Events.date[index].getFullYear() + "/" + Events.date[index].getMonth() + "/" + Events.date[index].getDate() + ".";
+    }
+    else{
+        eventString += "\n\tThere is no date specified for this event.";
+    }
+    
     return eventString;
 };
 
@@ -375,7 +383,7 @@ var addDateToEvent = function(_eventId, _date){
     var eventDate = new Date(_date);
 
     if(Events.eventId.indexOf(_eventId) < 0 || eventDate == "Invalid Date" ){
-        console.log("Operation not successful. \nCheck if the event you want to add a date to is existing or if your date format is correct. \nDate format: yyyy/mm/dd hh:mm");
+        console.log("Operation not successful. \nCheck if the event you want to add a date to is existing or if your date format is correct. \nDate format: yyyy/mm/dd.");
         return;
     }
 
@@ -394,6 +402,7 @@ var addDateToEvent = function(_eventId, _date){
 
 };
 // допълнителна функционалност добавена към removeEvent за правилното изтриване на цялото събитие заедно със датата.
+// допълнителна функционалност добавена към printEventInfo за правилното извеждане на информация за датата на събитието.
 
 //3. Създайте функционалност за извеждане на събитието с най-много добавени клиенти. 
 //Ако такова не съществува (всички са с равен брой) или не съществуват събития изведете необходимите съобщения, по ваш избор.
