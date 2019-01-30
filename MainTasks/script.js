@@ -211,6 +211,12 @@ var printAttendantInfo = function(_attendantId){
     console.log(Attendants.attendantName[index] + ", " + Attendants.gender[index] + " and " + Attendants.age[index] + " years old.");
 };
 
+var printAllAttendants = function(){
+    for(var i = 0; i < Attendants.attendantId.length; i++){
+        printAttendantInfo(Attendants.attendantId[i]);
+    }
+};
+
 
 //7. Визуализирайте списък с всички клиенти които присъстват на определено събитие.
 //Предоставете възможност да бъдат филтрирани по пол, тоест да се визуализират само мъжете или само жените.
