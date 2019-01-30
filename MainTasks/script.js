@@ -144,7 +144,7 @@ var Attendants = {
 var attendantIdCounter = 0;
 
 var createAttendant = function(_attendantName, _gender, _age){
-    if(_attendantName == null || _gender == null || _age == null || typeof _attendantName != "string" || (_gender != "female" && _gender != "male") || isNaN(_age)){ 
+    if(_attendantName == null || _gender == null || _age == null || typeof _attendantName != "string" || (_gender != "female" && _gender != "male") || isNaN(_age) || _age < 0){ 
         console.log("Incorrect data input. Operation Not successful.");
         return;
     }
